@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsListViewController" customModule="_7EatsTask" customModuleProvider="target">
+            <connections>
+                <outlet property="btnComments" destination="u7p-pZ-n9R" id="ZGu-nc-vIk"/>
+                <outlet property="tblCommentsList" destination="rI0-gc-61R" id="mzv-eY-acN"/>
+                <outlet property="txtComments" destination="X1K-bY-sCM" id="39x-Yx-eZ7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-gc-61R">
+                    <rect key="frame" x="15" y="164" width="384" height="688"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your comments..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X1K-bY-sCM">
+                    <rect key="frame" x="15" y="59" width="299" height="90"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="GCw-yA-jW3"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-pZ-n9R">
+                    <rect key="frame" x="324" y="89" width="75" height="30"/>
+                    <color key="backgroundColor" red="0.27186459299999999" green="0.71634680029999998" blue="0.97352796789999996" alpha="0.83330676020000005" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bVw-Lb-fjb"/>
+                        <constraint firstAttribute="width" constant="75" id="uqh-nu-iBL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Comment">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onSaveComments:" destination="-1" eventType="touchUpInside" id="ILw-cI-Tfp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="X1K-bY-sCM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="2ms-Vp-dMj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rI0-gc-61R" secondAttribute="bottom" constant="10" id="GRd-Lz-gCY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rI0-gc-61R" secondAttribute="trailing" constant="15" id="NID-C6-dDa"/>
+                <constraint firstItem="u7p-pZ-n9R" firstAttribute="trailing" secondItem="rI0-gc-61R" secondAttribute="trailing" id="Oib-Ir-kCX"/>
+                <constraint firstItem="u7p-pZ-n9R" firstAttribute="leading" secondItem="X1K-bY-sCM" secondAttribute="trailing" constant="10" id="Rps-fj-O2x"/>
+                <constraint firstItem="rI0-gc-61R" firstAttribute="top" secondItem="X1K-bY-sCM" secondAttribute="bottom" constant="15" id="TUF-1N-T1n"/>
+                <constraint firstItem="u7p-pZ-n9R" firstAttribute="centerY" secondItem="X1K-bY-sCM" secondAttribute="centerY" id="WM4-fD-UXX"/>
+                <constraint firstItem="X1K-bY-sCM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hGk-7z-FuA"/>
+                <constraint firstItem="rI0-gc-61R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="vjL-VR-RoK"/>
+            </constraints>
+            <point key="canvasLocation" x="79.710144927536234" y="51.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
